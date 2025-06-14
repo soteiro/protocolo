@@ -3,38 +3,176 @@ import Layout from '../layouts/Layout.astro';
 import SlideButtons from '../components/SlideButtons.astro';
 ---
 <Layout>
+	<div class="h-screen flex flex-col bg-white relative overflow-hidden">
+		<!-- Fondo con patrón geométrico -->
+		<div class="absolute inset-0 bg-gradient-to-br from-blue-600 to-indigo-700"></div>
+		<div class="absolute inset-0 opacity-10">
+			<div class="absolute top-0 left-0 w-full h-full"
+				 style="background-image: radial-gradient(circle at 25% 25%, white 2px, transparent 2px); background-size: 60px 60px;">
+			</div>
+		</div>
 
-    <div>
-            <div>
-                <div>Pasos Inmediatos</div>
-                <div>Acciones de Testigos</div>
-            </div>
-            <div>
-                <div>👨‍🏫 Docente</div>
-                <div>
-                    <strong>1.</strong> Cortar inmediatamente la alimentación eléctrica del puesto afectado
-                </div>
-                <div>
-                    <strong>2.</strong> Evaluar rápidamente la condición de Cecilio (heridas visibles, especialmente ojos)
-                </div>
-                <div>
-                    <strong>3.</strong> Alejar a otros estudiantes del área de riesgo
-                </div>
-                <div>
-                    <strong>4.</strong> Solicitar botiquín de primeros auxilios y avisar a personal de enfermería
-                </div>
+		<!-- Contenido principal -->
+		<div class="flex-1 flex items-center justify-center relative z-10 px-8">
+			<div class="max-w-6xl w-full grid lg:grid-cols-2 gap-16 items-center">
+				
+				<!-- Columna izquierda: Título principal -->
+				<div class="text-white space-y-6" id="main-section">
+					<div class="flex items-center space-x-4 mb-8" id="header-badge">
+						<div class="w-12 h-12 bg-purple-500 rounded-lg flex items-center justify-center">
+							<svg class="w-7 h-7 text-white" fill="currentColor" viewBox="0 0 20 20">
+								<path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z"/>
+							</svg>
+						</div>
+						<span class="text-blue-200 text-sm font-medium uppercase tracking-wider">Página 5</span>
+					</div>
+					
+					<h1 class="text-5xl lg:text-6xl font-bold leading-tight" id="main-title">
+						Acciones de<br>
+						<span class="text-blue-200">Testigos</span>
+					</h1>
+					
+					<p class="text-xl text-blue-100 leading-relaxed max-w-lg" id="subtitle">
+						Responsabilidades del docente y compañeros durante el incidente
+					</p>
+				</div>
 
-                <div>👥 Compañeros</div>
-                <div>
-                    <strong>•</strong> Mantener la calma y no aglomerarse
-                </div>
-                <div>
-                    <strong>•</strong> Seguir instrucciones del docente
-                </div>
-                <div>
-                    <strong>•</strong> Asistir si se requiere (buscar material de primeros auxilios, acompañar al afectado)
-                </div>
-            </div>
-        </div>
-        <SlideButtons urlNext="/6" urlBack="/4" />
+				<!-- Columna derecha: Contenido informativo -->
+				<div class="space-y-4" id="content-section">
+					<!-- Sección Docente -->
+					<div class="bg-white rounded-2xl p-6 shadow-2xl" id="main-card">
+						<h2 class="text-2xl font-bold text-gray-800 mb-4 flex items-center">
+							<span class="text-2xl mr-3">👨‍🏫</span>
+							Docente
+						</h2>
+						<div class="space-y-3">
+							<div class="bg-gray-50 rounded-lg p-3">
+								<p class="text-gray-700 text-sm"><strong>1.</strong> Cortar inmediatamente la alimentación eléctrica del puesto afectado</p>
+							</div>
+							<div class="bg-gray-50 rounded-lg p-3">
+								<p class="text-gray-700 text-sm"><strong>2.</strong> Evaluar rápidamente la condición de Cecilio (heridas visibles, especialmente ojos)</p>
+							</div>
+							<div class="bg-gray-50 rounded-lg p-3">
+								<p class="text-gray-700 text-sm"><strong>3.</strong> Alejar a otros estudiantes del área de riesgo</p>
+							</div>
+							<div class="bg-gray-50 rounded-lg p-3">
+								<p class="text-gray-700 text-sm"><strong>4.</strong> Solicitar botiquín de primeros auxilios y avisar a personal de enfermería</p>
+							</div>
+						</div>
+					</div>
+
+					<!-- Sección Compañeros -->
+					<div class="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl p-6 border border-blue-200" id="case-card">
+						<h3 class="text-lg font-bold text-gray-800 mb-4 flex items-center">
+							<span class="text-xl mr-3">👥</span>
+							Compañeros
+						</h3>
+						<div class="space-y-2">
+							<div class="bg-white/60 rounded-lg p-3">
+								<p class="text-gray-700 text-sm"><strong>•</strong> Mantener la calma y no aglomerarse</p>
+							</div>
+							<div class="bg-white/60 rounded-lg p-3">
+								<p class="text-gray-700 text-sm"><strong>•</strong> Seguir instrucciones del docente</p>
+							</div>
+							<div class="bg-white/60 rounded-lg p-3">
+								<p class="text-gray-700 text-sm"><strong>•</strong> Asistir si se requiere (buscar material de primeros auxilios, acompañar al afectado)</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Footer con indicadores y navegación -->
+		<div class="relative z-10 pb-6">
+			<div class="flex items-center justify-between px-8">
+				<!-- Indicadores de progreso -->
+				<div class="flex space-x-2" id="progress-indicators">
+					<div class="w-3 h-3 bg-white/40 rounded-full"></div>
+					<div class="w-3 h-3 bg-white/40 rounded-full"></div>
+					<div class="w-3 h-3 bg-white/40 rounded-full"></div>
+					<div class="w-3 h-3 bg-white/40 rounded-full"></div>
+					<div class="w-3 h-3 bg-white rounded-full shadow-lg"></div>
+				</div>
+
+				<!-- Número de página -->
+				<div class="text-white/80 text-sm font-medium">
+					5 / 9
+				</div>
+
+				<!-- Botones de navegación -->
+				<div id="navigation-buttons">
+					<SlideButtons urlNext="/6" urlBack="/4" />
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Scripts de animación -->
+	<script>
+		import { gsap } from "gsap";
+
+		function initAnimations() {
+			const tl = gsap.timeline();
+
+			tl.from("#header-badge", {
+				x: -50,
+				opacity: 0,
+				duration: 0.8,
+				ease: "power3.out"
+			})
+			.from("#main-title", {
+				y: 50,
+				opacity: 0,
+				duration: 1,
+				ease: "power3.out"
+			}, "-=0.4")
+			.from("#subtitle", {
+				y: 30,
+				opacity: 0,
+				duration: 0.8,
+				ease: "power3.out"
+			}, "-=0.5")
+			.from("#main-card", {
+				x: 100,
+				opacity: 0,
+				duration: 0.8,
+				ease: "power3.out"
+			}, "-=0.6")
+			.from("#case-card", {
+				x: 100,
+				opacity: 0,
+				duration: 0.8,
+				ease: "power3.out"
+			}, "-=0.4")
+			.from("#progress-indicators div", {
+				scale: 0,
+				duration: 0.4,
+				stagger: 0.1,
+				ease: "back.out(1.7)"
+			}, "-=0.3")
+			.from("#navigation-buttons", {
+				y: 20,
+				opacity: 0,
+				duration: 0.6,
+				ease: "power2.out"
+			}, "-=0.2");
+
+			const cards = document.querySelectorAll("#main-card, #case-card");
+			cards.forEach(card => {
+				card.addEventListener("mouseenter", () => {
+					gsap.to(card, { y: -5, scale: 1.02, duration: 0.3, ease: "power2.out" });
+				});
+				card.addEventListener("mouseleave", () => {
+					gsap.to(card, { y: 0, scale: 1, duration: 0.3, ease: "power2.out" });
+				});
+			});
+
+			gsap.to("#header-badge .bg-purple-500", {
+				scale: 1.05, duration: 2, ease: "power2.inOut", yoyo: true, repeat: -1
+			});
+		}
+
+		document.addEventListener("DOMContentLoaded", initAnimations);
+	</script>
 </Layout>
