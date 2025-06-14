@@ -2,6 +2,7 @@
 import Layout from "@layouts/Layout.astro";
 import SlideButtons from "@components/SlideButtons.astro";
 ---
+
 <Layout>
 	<div class="h-screen flex flex-col bg-white relative overflow-hidden">
 		<!-- Fondo con patrón geométrico -->
@@ -19,57 +20,87 @@ import SlideButtons from "@components/SlideButtons.astro";
 				<!-- Columna izquierda: Título principal -->
 				<div class="text-white space-y-6" id="main-section">
 					<div class="flex items-center space-x-4 mb-8" id="header-badge">
-						<div class="w-12 h-12 bg-red-500 rounded-lg flex items-center justify-center">
+						<div class="w-12 h-12 bg-orange-500 rounded-lg flex items-center justify-center">
 							<svg class="w-7 h-7 text-white" fill="currentColor" viewBox="0 0 20 20">
 								<path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd"/>
 							</svg>
 						</div>
-						<span class="text-blue-200 text-sm font-medium uppercase tracking-wider">Presentación Universitaria</span>
+						<span class="text-blue-200 text-sm font-medium uppercase tracking-wider">Página 3</span>
 					</div>
 					
 					<h1 class="text-5xl lg:text-6xl font-bold leading-tight" id="main-title">
-						Protocolo de<br>
-						<span class="text-blue-200">Accidente</span>
+						Factores de<br>
+						<span class="text-blue-200">Riesgo</span>
 					</h1>
 					
 					<p class="text-xl text-blue-100 leading-relaxed max-w-lg" id="subtitle">
-						Procedimientos de emergencia y prevención de accidentes en laboratorios académicos
+						Identificación de los elementos que contribuyeron al accidente
 					</p>
 				</div>
 
 				<!-- Columna derecha: Contenido informativo -->
-				<div class="space-y-6" id="content-section">
+				<div class="space-y-4" id="content-section">
 					<!-- Tarjeta principal -->
 					<div class="bg-white rounded-2xl p-6 shadow-2xl" id="main-card">
-						<div class="flex items-start space-x-4">
-							<div class="w-10 h-10 bg-blue-100 rounded-xl flex items-center justify-center flex-shrink-0 mt-1">
-								<svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+						<h2 class="text-2xl font-bold text-gray-800 mb-4 flex items-center">
+							<div class="w-8 h-8 bg-orange-100 rounded-lg flex items-center justify-center mr-3">
+								<svg class="w-4 h-4 text-orange-600" fill="currentColor" viewBox="0 0 20 20">
+									<path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd"/>
 								</svg>
 							</div>
-							<div>
-								<h2 class="text-2xl font-bold text-gray-800 mb-3">Seguridad en el Laboratorio</h2>
-								<p class="text-gray-600 leading-relaxed">
-									Análisis de protocolos de seguridad y procedimientos de emergencia para prevenir accidentes en entornos de investigación.
-								</p>
-							</div>
-						</div>
+							Factores de Riesgo Identificados
+						</h2>
 					</div>
 
-					<!-- Tarjeta del caso de estudio -->
-					<div class="bg-gradient-to-r from-amber-50 to-orange-50 rounded-2xl p-6 border border-orange-200" id="case-card">
-						<div class="flex items-start space-x-4">
-							<div class="w-10 h-10 bg-orange-100 rounded-xl flex items-center justify-center flex-shrink-0 mt-1">
-								<svg class="w-5 h-5 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/>
-								</svg>
+					<!-- Grid de factores de riesgo -->
+					<div class="grid grid-cols-1 gap-3" id="case-card">
+						<div class="bg-gradient-to-r from-red-50 to-pink-50 rounded-xl p-4 border border-red-200">
+							<div class="flex items-start space-x-3">
+								<span class="text-lg">🔌</span>
+								<div>
+									<h3 class="font-bold text-gray-800 text-sm">Error de Conexión</h3>
+									<p class="text-gray-600 text-xs">Conexión del capacitor con polaridad invertida</p>
+								</div>
 							</div>
-							<div>
-								<h3 class="text-lg font-bold text-gray-800 mb-2">Caso de Estudio</h3>
-								<p class="text-gray-700 text-sm leading-relaxed">
-									<strong>Explosión de capacitor electrolítico</strong><br>
-									por conexión con polaridad invertida
-								</p>
+						</div>
+
+						<div class="bg-gradient-to-r from-yellow-50 to-amber-50 rounded-xl p-4 border border-yellow-200">
+							<div class="flex items-start space-x-3">
+								<span class="text-lg">⚡</span>
+								<div>
+									<h3 class="font-bold text-gray-800 text-sm">Sobretensión</h3>
+									<p class="text-gray-600 text-xs">Aplicación de voltaje excesivo al componente</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="bg-gradient-to-r from-orange-50 to-red-50 rounded-xl p-4 border border-orange-200">
+							<div class="flex items-start space-x-3">
+								<span class="text-lg">❌</span>
+								<div>
+									<h3 class="font-bold text-gray-800 text-sm">Falta de Verificación</h3>
+									<p class="text-gray-600 text-xs">No se realizó prueba o revisión del circuito antes de aplicar tensión</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl p-4 border border-blue-200">
+							<div class="flex items-start space-x-3">
+								<span class="text-lg">🥽</span>
+								<div>
+									<h3 class="font-bold text-gray-800 text-sm">Equipo de Protección</h3>
+									<p class="text-gray-600 text-xs">No utilización o uso incorrecto de gafas de seguridad</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="bg-gradient-to-r from-purple-50 to-pink-50 rounded-xl p-4 border border-purple-200">
+							<div class="flex items-start space-x-3">
+								<span class="text-lg">📚</span>
+								<div>
+									<h3 class="font-bold text-gray-800 text-sm">Conocimiento Insuficiente</h3>
+									<p class="text-gray-600 text-xs">Falta de experiencia sobre riesgos de manipulación de capacitores electrolíticos</p>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -82,21 +113,21 @@ import SlideButtons from "@components/SlideButtons.astro";
 			<div class="flex items-center justify-between px-8">
 				<!-- Indicadores de progreso -->
 				<div class="flex space-x-2" id="progress-indicators">
+					<div class="w-3 h-3 bg-white/40 rounded-full"></div>
+					<div class="w-3 h-3 bg-white/40 rounded-full"></div>
 					<div class="w-3 h-3 bg-white rounded-full shadow-lg"></div>
-					<div class="w-3 h-3 bg-white/40 rounded-full"></div>
-					<div class="w-3 h-3 bg-white/40 rounded-full"></div>
 					<div class="w-3 h-3 bg-white/40 rounded-full"></div>
 					<div class="w-3 h-3 bg-white/40 rounded-full"></div>
 				</div>
 
 				<!-- Número de página -->
 				<div class="text-white/80 text-sm font-medium">
-					1 / 9
+					3 / 9
 				</div>
 
 				<!-- Botones de navegación -->
 				<div id="navigation-buttons">
-					<SlideButtons urlNext="/2" urlBack="/9" />
+					<SlideButtons urlNext="/4" urlBack="/2" />
 				</div>
 			</div>
 		</div>
@@ -143,11 +174,12 @@ import SlideButtons from "@components/SlideButtons.astro";
 				ease: "power3.out"
 			}, "-=0.6")
 
-			// Animación de la tarjeta de caso de estudio
-			.from("#case-card", {
+			// Animación de las tarjetas de factores de riesgo
+			.from("#case-card > div", {
 				x: 100,
 				opacity: 0,
-				duration: 0.8,
+				duration: 0.6,
+				stagger: 0.1,
 				ease: "power3.out"
 			}, "-=0.4")
 
@@ -168,11 +200,11 @@ import SlideButtons from "@components/SlideButtons.astro";
 			}, "-=0.2");
 
 			// Animaciones de hover para las tarjetas
-			const cards = document.querySelectorAll("#main-card, #case-card");
+			const cards = document.querySelectorAll("#main-card, #case-card > div");
 			cards.forEach(card => {
 				card.addEventListener("mouseenter", () => {
 					gsap.to(card, {
-						y: -5,
+						y: -3,
 						scale: 1.02,
 						duration: 0.3,
 						ease: "power2.out"
@@ -190,7 +222,7 @@ import SlideButtons from "@components/SlideButtons.astro";
 			});
 
 			// Animación de respiración para el badge principal
-			gsap.to("#header-badge .bg-red-500", {
+			gsap.to("#header-badge .bg-orange-500", {
 				scale: 1.05,
 				duration: 2,
 				ease: "power2.inOut",

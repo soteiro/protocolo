@@ -1,0 +1,13 @@
+---
+import NextButton from "./NextButton.astro";
+import BackButton from "./BackButton.astro";
+const { urlNext, urlBack } = Astro.props;
+---
+<div class="flex items-center gap-2">
+    <div class="bg-white/20 backdrop-blur-sm rounded-lg p-1 hover:bg-white/30 transition-all duration-300">
+        <BackButton url={urlBack} />    
+    </div>
+    <div class="bg-white/20 backdrop-blur-sm rounded-lg p-1 hover:bg-white/30 transition-all duration-300">
+        <NextButton url={urlNext} />
+    </div>
+</div>
